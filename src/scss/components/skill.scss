@@ -1,0 +1,117 @@
+@import url("https://cdn.jsdelivr.net/jquery.roundslider/1.0/roundslider.min.css");
+.skill{
+	background: url("../images/fon.png");
+	padding: 58px 0 65px 20px;
+	display: flex;
+
+	&__text{
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 24px;
+		color: $text-subtitle;
+		font-family: $font-family-roboto;
+		max-width: 198px;
+		margin: 0 0 0 68px;
+	}
+}
+
+.main-slider{
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	transition: opacity 0.5s ease 0s;
+
+	&:hover{
+		opacity: 0.8;
+	}
+
+	&__circle{
+		position: absolute;
+
+		&--yellow {
+			bottom: -1px;
+			left: 0;
+		}
+		&--green {
+			bottom: 59px;
+			left: 52px;
+		}
+		&--blue {
+			bottom: 0;
+			right: 2px;
+		}
+	}
+}
+
+.rs-handle.rs-handle-square {
+	cursor: pointer;
+}
+
+.rslider .rs-handle::before {
+	display: block;
+	content: "";
+	background: url("../images/arrow.svg");
+	position: absolute;
+	width: 57px;
+	height: 39px;
+	right: 0;
+	bottom: -20px;
+	transform: rotate(-32deg);
+	cursor: pointer;
+}
+
+.rslider .rs-inner-container {
+	opacity: 0;
+}
+
+.half.top .rs-tooltip,
+.half.bottom .rs-tooltip {
+	left: 145%;
+	bottom: 9px;
+	font-size: 50px;
+	font-weight: 600;
+	letter-spacing: 2.5px;
+	color: $text-blue;
+	font-family: $font-family-my-font;
+}
+
+.half.top div.rs-block, .half.bottom div.rs-block {
+	border: none;
+}
+.rs-bar .rs-seperator {
+	border: none;
+}
+
+@media (max-width: 580px){
+	.skill{
+
+		&__text{
+			max-width: 150px;
+			margin: 0 0 0 68px;
+		}
+	}
+
+	.half.top .rs-tooltip,
+	.half.bottom .rs-tooltip {
+		bottom: -10px;
+	}
+}
+
+@media (max-width: 510px){
+	.skill{
+		display: block;
+		padding: 30px 0 60px 0;
+		text-align: center;
+
+		&__text{
+			max-width: 198px;
+			margin: 20px auto 0;
+		}
+	}
+
+	.half.top .rs-tooltip,
+	.half.bottom .rs-tooltip {
+		left: auto;
+		bottom: -130px;
+	}
+}

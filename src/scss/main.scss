@@ -1,0 +1,45 @@
+// stylelint-disable at-rule-empty-line-before
+
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "sprites";
+@import "fonts";
+@import "vendor";
+@import "base";
+@import "helpers";
+
+@import "components/header";
+@import "components/footer";
+@import "components/data-set";
+@import "components/experience";
+@import "components/skill";
+
+@import "pages/home";
+
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+	width: 100%;
+	padding: 60px 15px;
+}
+
+.page {
+	max-width: 660px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.subtitle{
+	color: $text-subtitle;
+	font-size: 18px;
+	font-weight: 500;
+	font-family: $font-family-roboto;
+	margin: 0;
+}
+
+@media (max-width: 642px){
+	.wrapper {
+		padding: 30px 15px;
+	}
+}

@@ -1,0 +1,93 @@
+extends pug/base
+
+prepend vars
+	- title = "Тестовое задание"
+	- description = "Задача - разобраться в сборке и сверстать в соответствии с макетом"
+
+append vars
+	- meta.charset = "utf-8"
+	- meta.viewport = "width=device-width, initial-scale=1"
+
+block content
+	.wrapper
+		main.page
+			section.data-set
+				img.data-set__img(src="images/foto.jpg" alt="фото")
+				.data-set__form
+					input.data-set__input(type="text" name="name" placeholder="Имя" value="Киреева Евгения Николаевна" required="")
+					input.data-set__input(type="text" name="place" placeholder="Дата рождения" value="17.02.1987" required="")
+					input.data-set__input(type="text" name="skype" placeholder="Город" value="Санкт-Петербург" required="")
+					input.data-set__input(type="data" name="data" placeholder="Контактные данные" value="+79650103203" required="")
+				.data-set__patch
+					img(src="images/Shape.png" alt="иконка")
+			section.experience
+				h2.subtitle Навыки
+				.experience__body
+					.experience__item
+						label.label
+							| Html5
+							input(type="checkbox" checked="checked")
+							span.label__checkmark
+					.experience__item
+						label.label
+							| SASS
+							input(type="checkbox" checked="checked")
+							span.label__checkmark
+					.experience__item
+						label.label
+							| VANILLAJS
+							input(type="checkbox" checked="checked")
+							span.label__checkmark
+					.experience__item
+						label.label
+							| GIT
+							input(type="checkbox" checked="checked")
+							span.label__checkmark
+					.experience__item
+						label.label
+							| css3
+							input(type="checkbox" checked="checked")
+							span.label__checkmark
+					.experience__item
+						label.label
+							| LESS
+							input(type="checkbox")
+							span.label__checkmark
+					.experience__item
+						label.label
+							| ANGULAR
+							input(type="checkbox")
+							span.label__checkmark
+					.experience__item
+						label.label
+							| FOUNDATION
+							input(type="checkbox")
+							span.label__checkmark
+					.experience__item
+						label.label
+							| БЭМ
+							input(type="checkbox" checked="checked")
+							span.label__checkmark
+					.experience__item
+						label.label
+							| GULP
+							input(type="checkbox" checked="checked")
+							span.label__checkmark
+					.experience__item
+						label.label
+							| JQUERY
+							input(type="checkbox" checked="checked")
+							span.label__checkmark
+					.experience__item
+						label.label
+							| BOOTSTRAP
+							input(type="checkbox" checked="checked")
+							span.label__checkmark
+			section.skill
+				.main-slider
+					img.main-slider__circle.main-slider__circle--yellow(src="images/circle_1.png" alt="иконка")
+					img.main-slider__circle.main-slider__circle--green(src="images/circle_2.png" alt="иконка")
+					img.main-slider__circle.main-slider__circle--blue(src="images/circle_3.png" alt="иконка")
+					.rslider
+				p.skill__text
+					| Мой уровень владения Java Script

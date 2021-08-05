@@ -1,0 +1,92 @@
+.experience{
+	padding: 31px 35px 0 18px;
+	margin: 0 0 2px 0;
+	background: url('../images/fon.png');
+	&__body{
+		display: flex;
+		justify-content: space-between;
+		margin: 23px 0 0 0;
+		flex-wrap: wrap;
+	}
+	&__item{
+		display: flex;
+		flex: 0 1 20%;
+		margin: 0 30px 40px 0;
+		align-items: center;
+		min-width: 117px;
+		transition: background-color 0.5s ease 0s;
+
+		&:hover{
+			background-color: $hover-input;
+		}
+
+		&:nth-child(4n){
+			margin: 0 0px 35px 0;
+		}
+	}
+}
+
+.label {
+	display: block;
+	position: relative;
+	padding-left: 25px;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: uppercase;
+	line-height: 19px;
+}
+
+.label input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 19px;
+	min-width: 117px;
+}
+
+.label__checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 19px;
+	height: 19px;
+	border-radius: 5px;
+	background-color: $label-input;
+	transition: all 0.5s ease 0s;
+}
+
+.label__checkmark:after {
+	content: url('../images/check.svg');
+	position: absolute;
+	display: none;
+}
+
+.label input:checked ~ .label__checkmark:after {
+	display: block;
+}
+
+.label input:checked ~ .label__checkmark {
+	background-color:$checked-input;
+}
+
+.label .label__checkmark:after {
+	left: 3px;
+	top: 1px;
+	width: 19px;
+	height: 19px;
+	transform: scale(0);
+	background-size: cover;
+}
+
+.label input:checked + .label__checkmark:after {
+	transform: scale(1);
+}
+
+@media (max-width: 642px){
+	.experience{
+		&__item{
+			margin-right: 0;
+		}
+	}
+}
